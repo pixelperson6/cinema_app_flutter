@@ -1,5 +1,6 @@
 class SAppArgs {
   SAppArgs._();
-  static const String streamUrl = 'streamUrl';
-  static const String streamKey = 'streamKey';
+
+  // args example
+  // static const String streamUrl = 'streamUrl';
 }
