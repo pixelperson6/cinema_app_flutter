@@ -1,0 +1,4 @@
+class STextString {
+  STextString._();
+
+}

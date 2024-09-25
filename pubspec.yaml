@@ -36,6 +36,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   get: ^4.6.6
+  dropdown_button2: ^2.3.9
+  cached_network_image: ^3.4.1
+  intl: ^0.19.0
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +52,12 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
 
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/app/core/resources/
+  filename: s_assets.dart
+  field_prefix: s
+  class-name: SAssets
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
