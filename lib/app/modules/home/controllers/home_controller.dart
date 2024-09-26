@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cinema_app/app/modules/home/views/subview/movie_view.dart';
 import 'package:cinema_app/app/modules/home/views/subview/search_view.dart';
 import 'package:cinema_app/app/modules/home/views/subview/show_view.dart';
@@ -12,6 +13,8 @@ class HomeController extends GetxController {
   var currentIndex = 0.obs;
 
   var subviews = [MovieView(), ShowView(), SearchView(), WatchlistView()];
+
+  var carousel_sliderController = CarouselSliderController();
 
   @override
   void onInit() {

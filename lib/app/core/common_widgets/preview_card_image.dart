@@ -15,7 +15,7 @@ class PreviewCardImage extends StatelessWidget {
   const PreviewCardImage({
     super.key,
     required this.url,
-    this.errorImage = const AssetImage('assets/images/no_image.png'),
+    this.errorImage = const AssetImage('assets/image/placeholder.png'),
     this.width = 100,
     this.height = 100,
     this.radius = 0,
