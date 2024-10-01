@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../../../core/common_widgets/item_card_widget.dart';
+
 class MovieView extends GetView {
   const MovieView({super.key});
   @override
@@ -16,6 +18,7 @@ class MovieView extends GetView {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            // slider
             CarouselSlider(
               options: CarouselOptions(
                 height: 400.0,
@@ -27,7 +30,7 @@ class MovieView extends GetView {
                   builder: (BuildContext context) {
                     return Stack(
                       children: [
-                        Positioned.fill(child: PreviewCardImage(url: '')),
+                        const Positioned.fill(child: PreviewCardImage(url: '')),
                         Align(
                           alignment: Alignment.bottomLeft,
                           child: Container(
@@ -58,7 +61,7 @@ class MovieView extends GetView {
                                         initialPage: i - 1), // PageController
                                     count: 5,
                                     effect:
-                                        ExpandingDotsEffect(), // your preferred effect
+                                        const ExpandingDotsEffect(), // your preferred effect
                                     onDotClicked: (index) {}),
                               ],
                             ),
@@ -79,6 +82,8 @@ class MovieView extends GetView {
                 );
               }).toList(),
             ),
+
+            // title movie
             Row(
               children: [
                 SSpacing.smW,
@@ -91,33 +96,36 @@ class MovieView extends GetView {
                   'see all',
                   style: Get.textTheme.bodyMedium,
                 ),
-                Icon(
+                const Icon(
                   Icons.arrow_forward_ios,
                   size: 16,
                 ),
                 SSpacing.smW,
               ],
             ),
-            SingleChildScrollView(
+            const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
+              child: const Row(
                 children: [
-                  Container(
-                    width: 150,
-                    height: 200,
-                    color: Colors.red,
+                  ItemCardWidget(
+                    title: 'Movies name',
+                    rating: '8.8/10',
+                    showRating: true,
+                    imageUrl: '',
                   ),
                   SSpacing.smW,
-                  Container(
-                    width: 150,
-                    height: 200,
-                    color: Colors.red,
+                  ItemCardWidget(
+                    title: 'Another movie',
+                    rating: '8.8/10',
+                    showRating: true,
+                    imageUrl: '',
                   ),
                   SSpacing.smW,
-                  Container(
-                    width: 150,
-                    height: 200,
-                    color: Colors.red,
+                  ItemCardWidget(
+                    title: 'Movies name',
+                    rating: '8.8/10',
+                    showRating: false,
+                    imageUrl: '',
                   ),
                   SSpacing.smW,
                 ],
